@@ -1,24 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Medium</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HolaMundo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Indique la edad de su gato:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sm-DX-NWK">
+                                <rect key="frame" x="56.5" y="40" width="207" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mnc-PD-JTy">
+                                <rect key="frame" x="20" y="91" width="280" height="30"/>
+                                <attributedString key="attributedText"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogn-Vg-4pi">
+                                <rect key="frame" x="141" y="236" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gato" translatesAutoresizingMaskIntoConstraints="NO" id="ZjN-92-EhI">
+                                <rect key="frame" x="20" y="349" width="280" height="179"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5h-T6-9nY">
+                                <rect key="frame" x="129" y="141" width="62" height="36"/>
+                                <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="17"/>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Calcular"/>
+                                <connections>
+                                    <action selector="calcularEdad:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OM4-hn-oJ4"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ZjN-92-EhI" secondAttribute="bottom" constant="40" id="1zM-Zm-cWe"/>
+                            <constraint firstItem="Mnc-PD-JTy" firstAttribute="top" secondItem="8sm-DX-NWK" secondAttribute="bottom" constant="30" id="5vO-TN-nqm"/>
+                            <constraint firstItem="ZjN-92-EhI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="6ya-xg-b1r"/>
+                            <constraint firstItem="S5h-T6-9nY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AN3-us-iGc"/>
+                            <constraint firstItem="ZjN-92-EhI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AnM-JG-5JB"/>
+                            <constraint firstItem="Ogn-Vg-4pi" firstAttribute="top" secondItem="S5h-T6-9nY" secondAttribute="bottom" constant="40" id="Gsu-IZ-bfC"/>
+                            <constraint firstItem="8sm-DX-NWK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="IuG-ZT-Xvb"/>
+                            <constraint firstItem="Mnc-PD-JTy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Kf2-rY-dd6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Mnc-PD-JTy" secondAttribute="trailing" constant="20" id="RWz-9O-tZu"/>
+                            <constraint firstItem="8sm-DX-NWK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="Tff-Fd-CBJ"/>
+                            <constraint firstItem="Mnc-PD-JTy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Zcf-Ug-bmd"/>
+                            <constraint firstAttribute="trailing" secondItem="ZjN-92-EhI" secondAttribute="trailing" constant="20" id="oAI-yH-bvn"/>
+                            <constraint firstItem="Ogn-Vg-4pi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sVV-6X-NnO"/>
+                            <constraint firstItem="ZjN-92-EhI" firstAttribute="top" secondItem="Ogn-Vg-4pi" secondAttribute="bottom" constant="92" id="tKL-1d-iF8"/>
+                            <constraint firstItem="S5h-T6-9nY" firstAttribute="top" secondItem="Mnc-PD-JTy" secondAttribute="bottom" constant="20" id="wZ2-Jc-ioY"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="resultado" destination="Ogn-Vg-4pi" id="xUf-Ob-jNZ"/>
+                        <outlet property="textField" destination="Mnc-PD-JTy" id="ahm-Sm-5pe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-24.375" y="45.422535211267608"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Gato" width="415" height="179"/>
+    </resources>
 </document>
